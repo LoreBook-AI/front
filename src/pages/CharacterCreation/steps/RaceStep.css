@@ -6,16 +6,23 @@
 }
 
 .image {
-  flex: 4;
+  flex: 3;
   outline: 2px solid var(--color-primary-hover);
-  outline-offset: 3px;
+  /* outline-offset: 3px; */
   border-radius: 10px;
   padding: 0.5%;
   margin: 1%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .image img {
   border-radius: 10px;
+  width: 100%;      /* ocupa 100% do contêiner */
+  height: 100%;     /* mantém proporção */
+  object-fit: cover; /* ajusta a imagem ao contêiner sem distorcer */
+  display: block;
 }
 
 .description {
