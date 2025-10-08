@@ -1,0 +1,79 @@
+.component {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  padding: 0.5%;
+}
+
+.image {
+  flex: 4;
+  outline: 2px solid var(--color-primary-hover);
+  outline-offset: 3px;
+  border-radius: 10px;
+  padding: 0.5%;
+  margin: 1%;
+}
+
+.image img {
+  border-radius: 10px;
+}
+
+.description {
+  flex: 5;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+.race-info {
+  display: flex;
+  max-height: 70%;
+}
+
+.race-description {
+  margin: 1%;
+  flex: 1;
+  font-size: small;
+  text-align: justify;
+}
+
+.race-atributes {
+  margin: 1%;
+  flex: 1;
+  font-size: small;
+}
+
+.race-name {
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.selectec-race {
+  position: relative;
+  font-weight: bold;
+  display: inline-block;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.selectec-race:hover {
+  text-shadow: 0 0 8px var(--color-text), 0 0 12px var(--color-text);
+}
+
+.selectec-race::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 20em;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+.scroll {
+  flex: 1;
+  margin: 1%;
+}

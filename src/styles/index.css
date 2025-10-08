@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap');
+
+/* 🎨 Paleta de cores com variáveis */
+:root {
+  font-family: 'UnifrakturCook', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  /* 🌑 Modo Escuro (padrão) */
+  --color-bg: #0f0f0f;
+  --color-text: #f5f5f5;
+  --color-primary: #d62828;
+  --color-primary-hover: #ff4d4d;
+  --color-secondary: #1e1e1e;
+  --color-border: #2a2a2a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 🎨 Modo Claro */
+.light {
+  --color-bg: #ffffff;
+  --color-text: #1c1c1c;
+  --color-primary: #b22222;
+  --color-primary-hover: #d62828;
+  --color-secondary: #f5f5f5;
+  --color-border: #d9d9d9;
+}
+
+/* Reset + aplicação das variáveis */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: inherit;
+}
+
+/* Títulos */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* Botões */
+button {
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+button:hover {
+  border-color: var(--color-primary);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* 🌞 Auto-switch para modo claro */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-text: #1c1c1c;
+    --color-primary: #b22222;
+    --color-primary-hover: #d62828;
+    --color-secondary: #f5f5f5;
+    --color-border: #d9d9d9;
+  }
+}

@@ -1,0 +1,12 @@
+.parent {
+  display: flex;
+}
+
+.summary {
+  flex: 1;
+  padding: 4% 1%;
+}
+
+.main {
+  flex: 5.5;
+}
