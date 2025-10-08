@@ -1,17 +1,21 @@
 .panel {
   display: flex;
   flex-direction: column;
-  height: 36em;
+  height: auto;
   padding: 0% 1%;
+  margin-top: 5px;
+  /* border: 1px solid yellow; */
 }
 
 .stepper {
   display: flex;
-  flex-wrap: wrap; /* Permite quebrar linha se precisar */
+  flex-wrap: wrap;
+  /* Permite quebrar linha se precisar */
   justify-content: space-evenly;
   align-items: center;
   gap: 1.5rem;
-  font-size: small;
+  font-size: 11px;
+  padding: 2px;
 }
 
 .step-box {
@@ -38,7 +42,7 @@
   border: 0;
   outline: 2px solid var(--color-primary-hover);
   outline-offset: 3px;
-  transform: scale(1.05);
+  transform: scale(0.9);
   transition: all 0.25s ease;
 }
 
@@ -48,11 +52,13 @@
     transform: scale(0.8) translateY(8px);
     filter: drop-shadow(0 0 0 var(--color-primary));
   }
+
   50% {
     opacity: 0.7;
     transform: scale(1.03) translateY(-2px);
     filter: drop-shadow(0 0 6px var(--color-primary));
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -68,9 +74,11 @@
 .substep:nth-of-type(2) {
   animation-delay: 0.05s;
 }
+
 .substep:nth-of-type(3) {
   animation-delay: 0.1s;
 }
+
 .substep:nth-of-type(4) {
   animation-delay: 0.15s;
 }
@@ -83,8 +91,5 @@
   flex: 2;
   display: flex;
   justify-content: center;
-}
-
-.step-buttons button {
-  margin: 0.3%;
+  gap: 10px;
 }

@@ -2,14 +2,16 @@ import elven from '../../../assets/elven_warrior.png'
 import './RaceStep.css'
 
 export default function RaceStep() {
+
   return (
     <>
+
       <div className="component">
+
         <div className="image">
           <img src={elven} alt="" />
-        </div>
-        <div className="description">
-          <div className="race-info">
+          
+          <div className="description-race">
             <p className="race-description">
               Com a sua graça sobrenatural e seus traços finos, os elfos parecem
               assustadoramente belos para os humanos e os membros de muitas
@@ -20,6 +22,11 @@ export default function RaceStep() {
               curiosos do que gananciosos. A maioria dos elfos habita pequenas
               aldeias florestais escondidas entre as árvores.{' '}
             </p>
+          </div>
+        </div>
+
+        <div className="description">
+          <div className="race-info">
 
             <p className="race-atributes">
               <b>Aumento de Habilidade:</b> +2 Destreza.

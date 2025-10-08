@@ -1,13 +1,13 @@
 .parent {
   display: flex;
-  border: 1px solid red; 
+  /* border: 1px solid red; */
   padding: 5px;
-  height: 100vh;
+  min-height: 85vh;
 }
 
 .summary {
   flex: 1;
-  padding: 4% 1%;
+  padding: 2% 1%;
 }
 
 .main {

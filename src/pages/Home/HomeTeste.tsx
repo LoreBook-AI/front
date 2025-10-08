@@ -29,19 +29,22 @@ function HomeTeste() {
     return (
         <>
 
-            <AppBar position="static" sx={{ bgcolor: '#0f0f0f'}}>
-                <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+            <AppBar position="static" sx={{ bgcolor: 'var(--color-bg)' }}>
+                <Toolbar sx={{
+                    display: "flex", justifyContent: "space-between",
+                    minHeight: { xs: 35, md: 50 }, // Define 35px para todos os tamanhos de tela
+                    height: 50 // Opcional, mas ajuda a reforçar
+                }}>
 
                     <IconButton
-                        size="large"
+                        size="small"
                         edge="start"
-                        color="inherit"
                         aria-label="menu"
                         disableRipple
                         disableFocusRipple
                         onClick={toggleDrawer(true)}
                         sx={{
-                            mr: 2,
+                            mr: 2, color: 'var(--color-text)',
                             "&:hover": {
                                 filter: "drop-shadow(0 0 2em var(--color-text))"
                             },
@@ -70,7 +73,7 @@ function HomeTeste() {
 
             <SwipeableDrawer anchor="left" open={open} onClose={toggleDrawer(false)} onOpen={toggleDrawer(true)}
                 slotProps={{
-                    paper: { sx: { bgcolor: '#0f0f0f', color: '#fff' } }
+                    paper: { sx: { bgcolor: 'var(--color-bg)', color: 'var(--color-text)' } }
                 }} >
                 <Box
                     sx={{ width: 250 }}
@@ -79,18 +82,18 @@ function HomeTeste() {
                     onKeyDown={toggleDrawer(false)}
                 >
                     <DrawerHeader>
-                        <IconButton sx={{ color: '#fff' }} >
+                        <IconButton sx={{ color: 'var(--color-text)' }} >
                             <ChevronLeftIcon />
                         </IconButton>
                     </DrawerHeader>
 
-                    <Divider sx={{ bgcolor: '#fff' }} />
+                    <Divider sx={{ bgcolor: 'var(--color-bg)' }} />
 
                     <List>
                         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
                             <ListItem key={text} disablePadding>
                                 <ListItemButton>
-                                    <ListItemIcon sx={{ color: '#fff' }}>
+                                    <ListItemIcon sx={{ color: 'var(--color-text)' }}>
                                         {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                                     </ListItemIcon>
                                     <ListItemText primary={text} />

@@ -1,9 +1,35 @@
 .summary-border {
-  height: 26em;
-  border: 3px solid var(--color-text);
+  min-height: 26em;
+  border: 3px solid var(--color-primary-hover);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 3%;
+  padding: 2%;
   box-sizing: border-box;
+}
+
+.summary-border h4,
+.summary-border p {
+  margin: 0;
+  text-align: center;
+}
+
+.summary-text {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.summary-border hr {
+  background-color: var(--color-primary-hover);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  /* Garante que o <hr> seja exibido como um bloco */
+  display: block;
+}
+
+
+.summary-border h4 {
+  text-align: center;
+  padding-bottom: 0;
 }
