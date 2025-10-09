@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useState } from 'react'
 import RaceStep from '../steps/RaceStep'
 import './Stepper.css'
+import SubraceStep from '../steps/SubraceStep'
 
 type StepComponent = {
   id: string
@@ -22,7 +23,7 @@ const steps: Step[] = [
     id: 'race',
     components: [
       { id: 'race', component: <RaceStep /> },
-      { id: 'subrace', component: 'oii2' },
+      { id: 'subrace', component: <SubraceStep /> },
       { id: 'race_options', component: 'oii3' },
     ],
   },

@@ -3,11 +3,10 @@ import './RaceStep.css'
 import human from '../../../assets/human_ranger.png'
 import dwarf from '../../../assets/dwarf_paladin.png'
 import { useState } from 'react'
-
-export interface Imagens {
-  alt: string,
-  img: string
-}
+import type { Imagens } from '../types/ListScroll'
+import ImageDescription from '../components/reuse/ImageDescription'
+import ImageScroll from '../components/reuse/ImageScroll'
+import Description from '../components/reuse/Description'
 
 export default function RaceStep() {
 
@@ -15,45 +14,56 @@ export default function RaceStep() {
     {
       alt: "humano",
       img: human,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "dwarf",
-      img: dwarf
+      img: dwarf,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "elf",
-      img: elven
+      img: elven,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "humano",
       img: human,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "dwarf",
-      img: dwarf
+      img: dwarf,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "elf",
-      img: elven
+      img: elven,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "humano",
       img: human,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "dwarf",
-      img: dwarf
+      img: dwarf,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
     {
       alt: "elf",
-      img: elven
+      img: elven,
+      description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
     },
 
   ]);
 
+
   const [currentRace, setCurrentRace] = useState<Imagens>({
     alt: "humano",
     img: human,
+    description: "Aumento de Habilidade: +2 Destreza.\nIdade: Adulto aos 100 anos, vive até 750.\nTendência: Caótico e bondoso; drow tendem ao mal.\nTamanho: Médio (1,50-1,80 m, delgado).\nDeslocamento: 9 m.\nVisão no Escuro: 18 m, tons de cinza.\nSentidos Aguçados: Proficiência em Percepção.\nAncestral Feérico: Vantagem contra encantamentos e imune a sono mágico.\nTranse: Medita 4 h (equivale a 8 h de sono).\nIdiomas: Comum e Élfico.\nSub-raças: Alto elfo, Elfo da floresta, Drow."
   })
 
   function sincronizaImagem(alt: string): void {
@@ -66,72 +76,12 @@ export default function RaceStep() {
 
       <div className="component">
 
-        <div className="image">
-          <img src={currentRace.img} alt={currentRace.alt} />
+        <ImageDescription img={currentRace.img} alt={currentRace.alt} />
 
-          <div className="description-race">
-            <p className="race-description">
-              Com a sua graça sobrenatural e seus traços finos, os elfos parecem
-              assustadoramente belos para os humanos e os membros de muitas
-              outras raças. Elfos podem viver bem mais de 700 anos, isso dá a
-              eles uma ampla perspectiva sobre eventos que possam perturbar
-              profundamente raças que vivem uma vida mais curta. Eles são
-              normalmente mais divertidos do que animados, e provavelmente mais
-              curiosos do que gananciosos. A maioria dos elfos habita pequenas
-              aldeias florestais escondidas entre as árvores.{' '}
-            </p>
-          </div>
-        </div>
+        <Description description={currentRace.description ?? ''} />
 
-        <div className="description">
-          <div className="race-info">
+        <ImageScroll listaImagens={listaImagens} current={currentRace} functionClick={sincronizaImagem} />
 
-            <p className="race-atributes">
-              <b>Aumento de Habilidade:</b> +2 Destreza.
-              <br />
-              <b>Idade:</b> Adulto aos 100 anos, vive até 750.
-              <br />
-              <b>Tendência:</b> Caótico e bondoso; drow tendem ao mal.
-              <br />
-              <b>Tamanho:</b> Médio (1,50-1,80 m, delgado).
-              <br />
-              <b>Deslocamento:</b> 9 m.
-              <br />
-              <b>Visão no Escuro:</b> 18 m, tons de cinza.
-              <br />
-              <b>Sentidos Aguçados:</b> Proficiência em Percepção.
-              <br />
-              <b>Ancestral Feérico:</b> Vantagem contra encantamentos e imune a
-              sono mágico.
-              <br />
-              <b>Transe:</b> Medita 4 h (equivale a 8 h de sono).
-              <br />
-              <b>Idiomas:</b> Comum e Élfico.
-              <br />
-              <b>Sub-raças:</b> Alto elfo, Elfo da floresta, Drow.
-            </p>
-          </div>
-
-          <div className="race-name">
-            Selected Race:
-            <br />
-            <p className="selectec-race">Elf</p>
-          </div>
-        </div>
-
-
-
-        <div className="all-races">
-          <h4>Races</h4>
-
-          <div className='scroll'>
-            {listaImagens.map(item => (
-              <div className={`item ${currentRace.alt === item.alt ? 'selecionada' : ''}`}>
-                <img src={item.img} alt={item.alt} onClick={() => sincronizaImagem(item.alt)} />
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </>
   )

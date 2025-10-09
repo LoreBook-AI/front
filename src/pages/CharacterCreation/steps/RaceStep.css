@@ -139,6 +139,7 @@
     flex: none;
     width: 100%;
     font-size: 0.9rem;
+    font-weight: bold;
   }
 
   .race-name {
@@ -159,12 +160,6 @@
   max-height: 400px;
   flex: 1;
   margin: 1%;
-  text-align: center;
-}
-
-.all-races h4 {
-  margin: 0;
-  padding: 5px 0;
   text-align: center;
 }
 
