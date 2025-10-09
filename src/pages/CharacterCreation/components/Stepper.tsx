@@ -120,8 +120,8 @@ export default function Stepper() {
         {steps[currentStep].components[currentSubStep].component}
       </div>
       <div className="step-buttons">
-        <button className="button-medieval" onClick={goBack}>Go back</button>
-        <button className="button-medieval" onClick={proceed}>Proceed</button>
+        <button onClick={goBack}>Go back</button>
+        <button onClick={proceed}>Proceed</button>
       </div>
     </div>
   )

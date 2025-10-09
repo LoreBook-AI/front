@@ -1,10 +1,10 @@
 .parent {
   display: flex;
-  /* border: 1px solid red; */
   padding: 5px;
   min-height: 85vh;
 }
 
+/* layout padrão: lado a lado */
 .summary {
   flex: 1;
   padding: 2% 1%;
@@ -12,4 +12,21 @@
 
 .main {
   flex: 5.5;
+}
+
+/* quando a tela for estreita (ex: celular), muda para coluna */
+@media (max-width: 768px) {
+  .parent {
+    flex-direction: column; /* coloca o summary abaixo do main */
+  }
+
+  .main {
+    flex: none;
+    width: 100%;
+  }
+
+  .summary {
+    flex: none;
+    width: 100%;
+  }
 }

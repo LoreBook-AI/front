@@ -1,16 +1,15 @@
 .panel {
   display: flex;
   flex-direction: column;
-  height: auto;
+  height: 100%;
   padding: 0% 1%;
   margin-top: 5px;
-  /* border: 1px solid yellow; */
 }
 
 .stepper {
+  flex: 3;
   display: flex;
   flex-wrap: wrap;
-  /* Permite quebrar linha se precisar */
   justify-content: space-evenly;
   align-items: center;
   gap: 1.5rem;
@@ -88,7 +87,7 @@
 }
 
 .step-buttons {
-  flex: 2;
+  flex: 1;
   display: flex;
   justify-content: center;
   gap: 10px;
