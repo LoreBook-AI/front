@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: 'var(--color-bg)' }}>
+      <AppBar position="static" sx={{ bgcolor: 'var(--color-bg)', boxShadow: 'none' }}>
         <Toolbar
           sx={{
             display: 'flex',

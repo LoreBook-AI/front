@@ -1,7 +1,65 @@
 import elven from '../../../assets/elven_warrior.png'
 import './RaceStep.css'
+import human from '../../../assets/human_ranger.png'
+import dwarf from '../../../assets/dwarf_paladin.png'
+import { useState } from 'react'
+
+// interface Imagens {
+//   alt: string,
+//   img: string
+// }
 
 export default function RaceStep() {
+
+  const [listaImagens, setListaImagens] = useState([
+    {
+      alt: "humano",
+      img: human,
+    },
+    {
+      alt: "dwarf",
+      img: dwarf
+    },
+    {
+      alt: "elf",
+      img: elven
+    },
+    {
+      alt: "humano",
+      img: human,
+    },
+    {
+      alt: "dwarf",
+      img: dwarf
+    },
+    {
+      alt: "elf",
+      img: elven
+    },
+    {
+      alt: "humano",
+      img: human,
+    },
+    {
+      alt: "dwarf",
+      img: dwarf
+    },
+    {
+      alt: "elf",
+      img: elven
+    },
+
+  ]);
+
+  const [currentRace, setCurrentRace] = useState({
+    alt: '',
+    img: ''
+  })
+
+  // const sincronizaImagem = async (alt) => {
+  //   const filtra = listaImagens.filter(item => item.alt === alt)
+  //   setCurrentRace(filtra)
+  // }
 
   return (
     <>
@@ -9,8 +67,8 @@ export default function RaceStep() {
       <div className="component">
 
         <div className="image">
-          <img src={elven} alt="" />
-          
+          <img src={elven} alt="elfo" />
+
           <div className="description-race">
             <p className="race-description">
               Com a sua graça sobrenatural e seus traços finos, os elfos parecem
@@ -53,14 +111,28 @@ export default function RaceStep() {
               <b>Sub-raças:</b> Alto elfo, Elfo da floresta, Drow.
             </p>
           </div>
+
           <div className="race-name">
             Selected Race:
             <br />
             <p className="selectec-race">Elf</p>
           </div>
         </div>
-        <div className="scroll">
-          <h4>Hello worldie</h4>
+
+
+
+        <div className="all-races">
+          <h4>Races</h4>
+
+          <div className='scroll'>
+            {listaImagens.map(item => (
+              <div className='item'>
+                <img src={item.img} alt={item.alt} 
+                // onClick={sincronizaImagem(item.alt)} 
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -4,9 +4,9 @@ import { useAuth } from '../contexts/useAuth'
 function ProtectedRoute() {
   const { accessToken } = useAuth()
 
-  if (!accessToken) {
-    return <Navigate to="/login" replace />
-  }
+  // if (!accessToken) {
+  //   return <Navigate to="/login" replace />
+  // }
 
   return <Outlet />
 }
