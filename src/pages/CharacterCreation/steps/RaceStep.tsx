@@ -4,14 +4,14 @@ import human from '../../../assets/human_ranger.png'
 import dwarf from '../../../assets/dwarf_paladin.png'
 import { useState } from 'react'
 
-// interface Imagens {
-//   alt: string,
-//   img: string
-// }
+export interface Imagens {
+  alt: string,
+  img: string
+}
 
 export default function RaceStep() {
 
-  const [listaImagens, setListaImagens] = useState([
+  const [listaImagens, setListaImagens] = useState<Imagens[]>([
     {
       alt: "humano",
       img: human,
@@ -51,15 +51,15 @@ export default function RaceStep() {
 
   ]);
 
-  const [currentRace, setCurrentRace] = useState({
-    alt: '',
-    img: ''
+  const [currentRace, setCurrentRace] = useState<Imagens>({
+    alt: "humano",
+    img: human,
   })
 
-  // const sincronizaImagem = async (alt) => {
-  //   const filtra = listaImagens.filter(item => item.alt === alt)
-  //   setCurrentRace(filtra)
-  // }
+  function sincronizaImagem(alt: string): void {
+    const filtra = listaImagens.filter(item => item.alt === alt)
+    setCurrentRace(filtra[0])
+  }
 
   return (
     <>
@@ -67,7 +67,7 @@ export default function RaceStep() {
       <div className="component">
 
         <div className="image">
-          <img src={elven} alt="elfo" />
+          <img src={currentRace.img} alt={currentRace.alt} />
 
           <div className="description-race">
             <p className="race-description">
@@ -126,10 +126,8 @@ export default function RaceStep() {
 
           <div className='scroll'>
             {listaImagens.map(item => (
-              <div className='item'>
-                <img src={item.img} alt={item.alt} 
-                // onClick={sincronizaImagem(item.alt)} 
-                />
+              <div className={`item ${currentRace.alt === item.alt ? 'selecionada' : ''}`}>
+                <img src={item.img} alt={item.alt} onClick={() => sincronizaImagem(item.alt)} />
               </div>
             ))}
           </div>

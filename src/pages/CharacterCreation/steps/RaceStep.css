@@ -185,7 +185,7 @@
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background: var(--color-primary-hover);
+  background: var(--color-text);
   border-radius: 8px;
 }
 
@@ -205,6 +205,10 @@
 
 .item:hover {
   transform: scale(1);
+  /* border: 2px solid var(--color-primary-hover); */
+}
+
+.item.selecionada {
   border: 2px solid var(--color-primary-hover);
 }
 
