@@ -89,7 +89,7 @@ export default function RaceStep() {
       <div className="component">
         <ImageDescription img={currentRace.img} alt={currentRace.alt} />
 
-        <Description description={currentRace.description ?? ''} />
+        <Description description={currentRace.description ?? ''} text={currentRace.alt} tipo='Race' />
 
         <ImageScroll
           listaImagens={listaImagens}

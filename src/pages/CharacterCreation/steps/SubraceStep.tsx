@@ -77,7 +77,7 @@ export default function SubraceStep() {
 
                 <ImageDescription img={currentSubrace.img} alt={currentSubrace.alt} />
 
-                <Description description={currentSubrace.description ?? ''} />
+                <Description description={currentSubrace.description ?? ''} text={currentSubrace.alt} tipo='Subrace'/>
 
                 <ImageScroll listaImagens={listaImagens} current={currentSubrace} functionClick={sincronizaImagem} />
 

@@ -3,7 +3,7 @@ import '../../steps/RaceStep.css'
 import type { DescriptionProps } from '../../types/ListScroll'
 
 
-function Description({ description }: DescriptionProps): JSX.Element {
+function Description({ description, text, tipo }: DescriptionProps): JSX.Element {
     return (
         <div className="description">
             <div className="race-info">
@@ -11,9 +11,9 @@ function Description({ description }: DescriptionProps): JSX.Element {
             </div>
 
             <div className="race-name">
-                Selected Race:
+                Selected {tipo}:
                 <br />
-                <p className="selectec-race">Elf</p>
+                <p className="selectec-race">{text}</p>
             </div>
         </div>
     )

@@ -5,5 +5,7 @@ export interface Imagens {
 }
 
 export interface DescriptionProps {
-  description: string
+  description: string,
+  text: string,
+  tipo: string
 }
